@@ -26,7 +26,7 @@ Installation
 Clone the repository:
 
 
-git clone https://github.com/ashugoel/taskboard.git
+git clone https://github.com/AshuGoel2810/taskboard.git
 Navigate to the project directory:
 
 
