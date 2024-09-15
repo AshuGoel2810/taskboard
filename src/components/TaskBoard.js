@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table';
 import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css';
 
-
 const TaskBoard = () => {
     const dispatch = useDispatch();
     const { tasks, loading, error } = useSelector((state) => state.tasks);
@@ -15,15 +14,10 @@ const TaskBoard = () => {
     const [isEditing, setIsEditing] = useState(null);
     const [editTodo, setEditTodo] = useState('');
 
- 
     const [currentPage, setCurrentPage] = useState(1);
-    const [tasksPerPage] = useState(5); 
+    const [tasksPerPage] = useState(5);
     const [searchTerm, setSearchTerm] = useState('');
 
- 
-    const [showModal, setShowModal] = useState(false);
-
-    const toggleActions = () => setShowActions(!showActions);
     const [showActions, setShowActions] = useState(false);
 
     useEffect(() => {
@@ -43,7 +37,6 @@ const TaskBoard = () => {
         if (newTask.todo.trim()) {
             dispatch(createTask(newTask));
             setNewTask({ todo: '', userId: 1, completed: false });
-            setShowModal(false);
         }
     };
 
@@ -59,11 +52,9 @@ const TaskBoard = () => {
         });
     };
 
-   
     const filteredTasks = tasks.filter((task) =>
         task.todo.toLowerCase().includes(searchTerm.toLowerCase())
     );
-
 
     const indexOfLastTask = currentPage * tasksPerPage;
     const indexOfFirstTask = indexOfLastTask - tasksPerPage;
@@ -83,14 +74,12 @@ const TaskBoard = () => {
                     {loading && <p className="text-info d-flex justify-content-center align-items-center">Loading...</p>}
                     {error && <p className="text-danger">Error: {error}</p>}
 
-
-                 
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Add New Task</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div className="modal-dialog">
+                            <div className="modal-content">
+                                <div className="modal-header">
+                                    <h5 className="modal-title" id="exampleModalLabel">Add New Task</h5>
+                                    <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div className="modal-body">
                                     <input
@@ -101,16 +90,15 @@ const TaskBoard = () => {
                                         placeholder="Enter new task"
                                     />
                                 </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onClick={handleAdd}>
+                                <div className="modal-footer">
+                                    <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" className="btn btn-primary" data-bs-dismiss="modal" onClick={handleAdd}>
                                         <i className="fa fa-plus"></i> Add Task
                                     </button>
                                 </div>
                             </div>
                         </div>
                     </div>
-
 
                     <div className="card shadow-sm mb-5">
                         <div className="card-header">
@@ -119,7 +107,7 @@ const TaskBoard = () => {
 
                                 {/* Search Bar */}
                                 <div className="row gap-2">
-                                    <button type="button" class="btn btn-primary col-4" data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={() => setShowModal(true)}>
+                                    <button type="button" className="btn btn-primary col-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                         Add Task
                                     </button>
                                     <div className="col-7">
@@ -180,7 +168,7 @@ const TaskBoard = () => {
                                                         id={`dropdownMenuButton${task.id}`}
                                                         data-bs-toggle="dropdown"
                                                         aria-expanded="false"
-                                                        onClick={toggleActions}
+                                                        onClick={() => setShowActions(!showActions)}
                                                     >
                                                         <i className="fa fa-ellipsis-v"></i> {/* Three dots icon */}
                                                     </button>
@@ -223,9 +211,6 @@ const TaskBoard = () => {
 
                                                     </ul>
                                                 </div>
-
-                                        
-
                                             </Td>
 
                                         </Tr>
