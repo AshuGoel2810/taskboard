@@ -1,70 +1,68 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Description
+TaskBoard is a task management application built with React.js and Redux. It provides features for creating, editing, deleting, and managing tasks. Users can also search and paginate through their tasks. The application integrates Bootstrap 5 for styling and react-super-responsive-table for responsive tables.
 
-## Available Scripts
+Features
+        Task Management: Create, update, and delete tasks.
+        Search: Filter tasks by their title.
+        Pagination: Navigate through tasks with pagination.
+        Status Management: Mark tasks as done or in progress.
+        Responsive Design: Designed to be mobile-friendly with Bootstrap 5.
+        
+        
+Technologies Used
+        React.js: Front-end library for building user interfaces.
+        Redux: State management library.
+        Bootstrap 5: CSS framework for responsive design.
+        react-super-responsive-table: Library for responsive tables.
+        React Router: For navigation between task details.
+    
+Getting Started
+    Prerequisites
+        Node.js
+        npm (Node Package Manager)
 
-In the project directory, you can run:
+Installation
+Clone the repository:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+git clone https://github.com/ashugoel/taskboard.git
+Navigate to the project directory:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+cd taskboard
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+npm install
+Running the Application
+To start the development server and launch the application, run:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+bash
+Copy code
+npm start
+The application will be available at http://localhost:3000.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Building for Production
+To create a production build, run:
 
-### `npm run eject`
+bash
+Copy code
+npm run build
+The production build will be available in the build directory.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Usage
+        Add Task: Click the "Add Task" button to open the modal and add a new task.
+        Edit Task: Click the edit icon (pencil) in the actions menu to modify a task.
+        Delete Task: Click the delete icon (trash) to remove a task.
+        Change Status: Click the status button to toggle between "Done" and "In Progress".
+        Search Tasks: Use the search bar to filter tasks by title.
+        Paginate: Use the pagination controls to navigate through tasks.
+        Contributing
+        Feel free to open issues or submit pull requests if you have suggestions or improvements. Please follow the contribution guidelines when contributing.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+License
+This project is licensed under the MIT License. See the LICENSE file for details.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Contact
+For any questions or feedback, please contact ashugoel77777@example.com.
