@@ -66,3 +66,5 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 Contact
 For any questions or feedback, please contact ashugoel77777@example.com.
+# taskboard
+TaskBoard is a task management application built with React.js and Redux. It provides features for creating, editing, deleting, and managing tasks. Users can also search and paginate through their tasks. The application integrates Bootstrap 5 for styling and react-super-responsive-table for responsive tables.
